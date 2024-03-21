@@ -1,3 +1,5 @@
+import 'package:rijksmuseum_app/core/config/env.dart';
+
 final class C {
   C._();
   //TODO: Write App Name
@@ -10,7 +12,8 @@ final class C {
 
 final class _Api {
   const _Api();
-  String get baseUrl => '';
+  String get baseUrl =>
+      'https://www.rijksmuseum.nl/api/en/collection?key=${Env.apiKey}';
 }
 
 final class _Hive {
