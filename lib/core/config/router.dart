@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:rijksmuseum_app/features/view/home_view.dart';
+import 'package:rijksmuseum_app/features/home/view/home_view.dart';
 
 class Routes {
   Routes._();
