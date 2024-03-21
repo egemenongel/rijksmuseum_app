@@ -1,3 +1,5 @@
+import '../extensions/extensions.dart';
+
 sealed class AppException implements Exception {
   AppException(this.code, this.message);
   final String code;
@@ -5,4 +7,14 @@ sealed class AppException implements Exception {
 
   @override
   String toString() => message;
+}
+
+class HomeItemsException extends AppException {
+  HomeItemsException()
+      : super('home-fetch-failure', 'Could not fetch the data'.hardCoded);
+}
+
+class InternetException extends AppException {
+  InternetException()
+      : super('connection-error', 'No Internet Connection'.hardCoded);
 }
