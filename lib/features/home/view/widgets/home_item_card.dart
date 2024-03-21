@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:rijksmuseum_app/core/components/shimmer.dart';
+import 'package:rijksmuseum_app/core/config/router.dart';
 import 'package:rijksmuseum_app/core/extensions/extensions.dart';
 import 'package:rijksmuseum_app/core/theme/app_edge_insets.dart';
 import 'package:rijksmuseum_app/features/home/models/home_response_model.dart';
@@ -15,8 +17,14 @@ class HomeItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final id = artItem.objectNumber;
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        context.pushNamed(
+          Routes.artItemDetail,
+          pathParameters: {'id': id},
+        );
+      },
       child: Container(
         margin: AppEdgeInsets.allXSmall,
         child: Stack(
