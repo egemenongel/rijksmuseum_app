@@ -1,7 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import '../../../core/errors/exceptions.dart';
 import '../../../core/services/dio_service.dart';
+import '../../../core/utils/print.dart';
 import '../models/home_response_model.dart';
 
 abstract interface class IHomeService {
@@ -16,7 +18,19 @@ class HomeService implements IHomeService {
 
   @override
   Future<HomeResponseModel> fetchHomeItems([int? p, int? ps]) async {
-    return const HomeResponseModel(artObjects: []);
+    try {
+      final res = await _dio.get(
+        '',
+        queryParameters: {'ps': ps, 'p': p},
+      );
+      return HomeResponseModel.fromJson(res.data);
+    } on DioException catch (e) {
+      Print.error(e.message);
+      if (e.type == DioExceptionType.connectionError) {
+        throw InternetException();
+      }
+      throw HomeItemsException();
+    }
   }
 }
 
