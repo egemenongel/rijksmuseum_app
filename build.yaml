@@ -1,0 +1,48 @@
+targets:
+  $default:
+    builders:
+      slang_build_runner:
+        options:
+          input_directory: assets/i18n
+          output_directory: lib/core/i18n
+          output_file_name: translations.g.dart
+          fallback_strategy: base_locale
+          timestamp: false
+          obfuscation:
+            enabled: true
+        generate_for:
+          include:
+            - assets/i18n/**.json
+            - lib/core/i18n/**.g.dart
+
+      freezed:
+        generate_for:
+          include:
+            - "**/models/**.dart"
+          
+      envied_generator:envied:
+        generate_for:
+          include:
+            - lib/core/config/env.dart
+
+      go_router_builder:
+        generate_for:
+          include:
+            - lib/core/routes.dart
+            
+      riverpod_generator:
+        generate_for:
+          include:
+            - "lib/core/**"
+            - "**/providers/**.dart"
+            - "**/services/**.dart"
+            - "**/**_provider.dart"
+            - "**/**_providers.dart"
+     
+      json_serializable:
+        options:
+          generic_argument_factories: true
+          explicit_to_json: true
+        generate_for:
+          include:
+            - "**/models/**.dart"
