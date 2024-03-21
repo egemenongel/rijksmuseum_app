@@ -6,6 +6,7 @@ final class C {
   static String appName = '';
   //TODO: Write Placeholder Link
   static String imagePlaceholder = '';
+  static const paginationSize = 12;
   static const api = _Api();
   static const hive = _Hive();
 }
