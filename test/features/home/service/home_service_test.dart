@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:rijksmuseum_app/features/home/models/home_response_model.dart';
 
-import '../../mock/mocks.dart';
+import '../../../mock/mocks.dart';
 
 void main() {
   test('Get home items', () async {
