@@ -28,7 +28,7 @@ class AppTextStyles {
 
   static const TextStyle bodyLarge = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.bold,
   );
 
   static const TextStyle bodyMedium = TextStyle(

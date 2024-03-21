@@ -9,6 +9,7 @@ abstract final class AppThemes {
       brightness: Brightness.dark,
       primaryColor: Colors.red,
       primaryTextTheme: TextThemes.textTheme,
+      textTheme: TextThemes.textTheme,
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
