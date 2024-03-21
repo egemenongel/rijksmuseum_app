@@ -14,6 +14,11 @@ class HomeItemsException extends AppException {
       : super('home-fetch-failure', 'Could not fetch the data'.hardCoded);
 }
 
+class DetailsException extends AppException {
+  DetailsException()
+      : super('details-fetch-failure', 'Could not fetch the details'.hardCoded);
+}
+
 class InternetException extends AppException {
   InternetException()
       : super('connection-error', 'No Internet Connection'.hardCoded);

@@ -15,6 +15,8 @@ final class _Api {
   const _Api();
   String get baseUrl =>
       'https://www.rijksmuseum.nl/api/en/collection?key=${Env.apiKey}';
+  String details(String id) =>
+      'https://www.rijksmuseum.nl/api/en/collection/$id?key=${Env.apiKey}';
 }
 
 final class _Hive {
