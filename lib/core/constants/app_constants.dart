@@ -2,10 +2,7 @@ import 'package:rijksmuseum_app/core/config/env.dart';
 
 final class C {
   C._();
-  //TODO: Write App Name
-  static String appName = '';
-  //TODO: Write Placeholder Link
-  static String imagePlaceholder = '';
+  static String appName = 'Rijksmuesum App';
   static const paginationSize = 12;
   static const api = _Api();
   static const hive = _Hive();
