@@ -3,12 +3,11 @@
 Mobile app built with Flutter for browsing and exploring collections from the Rijksmuseum.
 
 ## Table of Contents
-- [rijksmuseum_app](rijksmuseum_app)
-  * [Table of Contents](#table-of-contents)
-  * [Screenshots](#screenshots)
-      + [Collections Screen](#collections-screen)
-      + [Details Screen](#details-screen)
-  * [License](#license)
+- [Table of Contents](#table-of-contents)
+- [Screenshots](#screenshots)
+    * [Collections Screen](#collections-screen)
+    * [Details Screen](#details-screen)
+- [License](#license)
 
 ## Screenshots
 
