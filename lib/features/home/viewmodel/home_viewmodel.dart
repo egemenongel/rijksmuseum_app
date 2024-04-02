@@ -20,6 +20,7 @@ class HomeViewmodel extends AsyncNotifier<List<ArtObjectModel>> {
 
   IHomeService get homeService => ref.read(homeServiceProvider);
 
+  // TODO: Write cleaner
   Future<void> fetchInitialList() async {
     state = const AsyncLoading();
     final res = await homeService.fetchHomeItems(pageCount, C.paginationSize);

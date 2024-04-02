@@ -5,6 +5,7 @@ import 'package:rijksmuseum_app/features/home/models/home_response_model.dart';
 import '../../../mock/mocks.dart';
 
 void main() {
+  // TODO: Write fail tests
   test('Get home items', () async {
     final testService = MockHomeService();
     when(() => testService.fetchHomeItems())

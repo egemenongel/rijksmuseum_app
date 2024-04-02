@@ -16,6 +16,7 @@ class ItemsGrid extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // TODO: Better pagination
     final sc = useScrollController();
     sc.addListener(() async {
       if (!ref.read(isFetchingProvider)) {
