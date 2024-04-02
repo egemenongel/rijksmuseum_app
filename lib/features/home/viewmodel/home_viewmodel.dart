@@ -22,7 +22,7 @@ class HomeViewmodel extends AsyncNotifier<List<ArtObjectModel>> {
 
   Future<void> fetchInitialList() async {
     state = const AsyncLoading();
-    final res = await homeService.fetchHomeItems(1, C.paginationSize);
+    final res = await homeService.fetchHomeItems(pageCount, C.paginationSize);
     _items.addAll(res.artObjects!);
     state = AsyncValue.data(_items);
   }
