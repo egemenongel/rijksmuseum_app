@@ -1,16 +1,28 @@
 # rijksmuseum_app
 
-A new Flutter project.
+Mobile app built with Flutter for browsing and exploring collections from the Rijksmuseum.
 
-## Getting Started
+## Table of Contents
+- [rijksmuseum_app](rijksmuseum_app)
+  * [Table of Contents](#table-of-contents)
+  * [Screenshots](#screenshots)
+      + [Collections Screen](#collections-screen)
+      + [Details Screen](#details-screen)
+  * [License](#license)
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+### Collections Screen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/egemenongel/rijksmuseum_app/assets/73590188/4d0e676d-f6b1-4762-9c78-15aeafb02f37" alt="Collections Screen" width="400"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Details Screen
+
+<img src="https://github.com/egemenongel/rijksmuseum_app/assets/73590188/27259cec-b007-4ccf-8f2b-f2b3b859843a" alt="Details Screen" width="400"/>
+
+## License
+
+This project is licensed under the MIT license.
+See <a href="https://github.com/egemenongel/rijksmuseum_app/blob/main/LICENSE">LICENSE</a> for more information.
+
+
