@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:rijksmuseum_app/core/extensions/extensions.dart';
 import 'package:rijksmuseum_app/features/home/view/widgets/home_items_grid.dart';
-import 'package:rijksmuseum_app/features/home/view/widgets/home_pagination_loading.dart';
 
 import '../../../core/components/components.dart';
 import '../viewmodel/home_viewmodel.dart';
@@ -36,7 +35,6 @@ class _Body extends ConsumerWidget {
             ItemsGrid(
               items: items,
             ),
-            const HomePaginationLoading(),
           ],
         );
       },
