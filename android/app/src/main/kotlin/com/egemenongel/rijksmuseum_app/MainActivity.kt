@@ -1,4 +1,4 @@
-package com.example.rijksmuseum_app
+package com.egemenongel.rijksmuseum_app
 
 import io.flutter.embedding.android.FlutterActivity
 
