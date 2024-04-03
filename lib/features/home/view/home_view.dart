@@ -4,7 +4,7 @@ import 'package:rijksmuseum_app/core/extensions/extensions.dart';
 import 'package:rijksmuseum_app/features/home/view/widgets/home_items_grid.dart';
 
 import '../../../core/components/components.dart';
-import '../viewmodel/home_viewmodel.dart';
+import '../providers/home_providers.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -26,15 +26,13 @@ class _Body extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final homeVm = ref.watch(homeViewmodel);
+    final countData = ref.watch(itemsCountProvider);
     return AsyncWidget(
-      asyncData: homeVm,
-      builder: (items) {
+      asyncData: countData,
+      builder: (count) {
         return Stack(
           children: [
-            ItemsGrid(
-              items: items,
-            ),
+            ItemsGrid(count: count!),
           ],
         );
       },

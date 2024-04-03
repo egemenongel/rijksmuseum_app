@@ -3,7 +3,7 @@ import 'package:rijksmuseum_app/core/config/env.dart';
 final class C {
   C._();
   static String appName = 'Rijksmuesum App';
-  static const paginationSize = 6;
+  static const paginationSize = 10;
   static const api = _Api();
   static const hive = _Hive();
 }

@@ -20,6 +20,7 @@ HomeResponseModel _$HomeResponseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HomeResponseModel {
+  int? get count => throw _privateConstructorUsedError;
   List<ArtObjectModel>? get artObjects => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -34,7 +35,7 @@ abstract class $HomeResponseModelCopyWith<$Res> {
           HomeResponseModel value, $Res Function(HomeResponseModel) then) =
       _$HomeResponseModelCopyWithImpl<$Res, HomeResponseModel>;
   @useResult
-  $Res call({List<ArtObjectModel>? artObjects});
+  $Res call({int? count, List<ArtObjectModel>? artObjects});
 }
 
 /// @nodoc
@@ -50,9 +51,14 @@ class _$HomeResponseModelCopyWithImpl<$Res, $Val extends HomeResponseModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? count = freezed,
     Object? artObjects = freezed,
   }) {
     return _then(_value.copyWith(
+      count: freezed == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
       artObjects: freezed == artObjects
           ? _value.artObjects
           : artObjects // ignore: cast_nullable_to_non_nullable
@@ -69,7 +75,7 @@ abstract class _$$HomeResponseModelImplCopyWith<$Res>
       __$$HomeResponseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<ArtObjectModel>? artObjects});
+  $Res call({int? count, List<ArtObjectModel>? artObjects});
 }
 
 /// @nodoc
@@ -83,9 +89,14 @@ class __$$HomeResponseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? count = freezed,
     Object? artObjects = freezed,
   }) {
     return _then(_$HomeResponseModelImpl(
+      count: freezed == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
       artObjects: freezed == artObjects
           ? _value._artObjects
           : artObjects // ignore: cast_nullable_to_non_nullable
@@ -98,12 +109,14 @@ class __$$HomeResponseModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HomeResponseModelImpl implements _HomeResponseModel {
   const _$HomeResponseModelImpl(
-      {required final List<ArtObjectModel>? artObjects})
+      {this.count, required final List<ArtObjectModel>? artObjects})
       : _artObjects = artObjects;
 
   factory _$HomeResponseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$HomeResponseModelImplFromJson(json);
 
+  @override
+  final int? count;
   final List<ArtObjectModel>? _artObjects;
   @override
   List<ArtObjectModel>? get artObjects {
@@ -116,7 +129,7 @@ class _$HomeResponseModelImpl implements _HomeResponseModel {
 
   @override
   String toString() {
-    return 'HomeResponseModel(artObjects: $artObjects)';
+    return 'HomeResponseModel(count: $count, artObjects: $artObjects)';
   }
 
   @override
@@ -124,6 +137,7 @@ class _$HomeResponseModelImpl implements _HomeResponseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeResponseModelImpl &&
+            (identical(other.count, count) || other.count == count) &&
             const DeepCollectionEquality()
                 .equals(other._artObjects, _artObjects));
   }
@@ -131,7 +145,7 @@ class _$HomeResponseModelImpl implements _HomeResponseModel {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_artObjects));
+      runtimeType, count, const DeepCollectionEquality().hash(_artObjects));
 
   @JsonKey(ignore: true)
   @override
@@ -150,12 +164,14 @@ class _$HomeResponseModelImpl implements _HomeResponseModel {
 
 abstract class _HomeResponseModel implements HomeResponseModel {
   const factory _HomeResponseModel(
-          {required final List<ArtObjectModel>? artObjects}) =
+          {final int? count, required final List<ArtObjectModel>? artObjects}) =
       _$HomeResponseModelImpl;
 
   factory _HomeResponseModel.fromJson(Map<String, dynamic> json) =
       _$HomeResponseModelImpl.fromJson;
 
+  @override
+  int? get count;
   @override
   List<ArtObjectModel>? get artObjects;
   @override

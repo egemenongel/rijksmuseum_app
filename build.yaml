@@ -35,9 +35,11 @@ targets:
           include:
             - "lib/core/**"
             - "**/providers/**.dart"
+            - "**/viewmodel/**.dart"
             - "**/services/**.dart"
             - "**/**_provider.dart"
             - "**/**_providers.dart"
+            - "**/**_viewmodel.dart"
      
       json_serializable:
         options:

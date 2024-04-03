@@ -6,6 +6,7 @@ part 'home_response_model.g.dart';
 @freezed
 class HomeResponseModel with _$HomeResponseModel {
   const factory HomeResponseModel({
+    int? count,
     required List<ArtObjectModel>? artObjects,
   }) = _HomeResponseModel;
 

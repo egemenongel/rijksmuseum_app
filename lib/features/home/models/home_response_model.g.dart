@@ -9,6 +9,7 @@ part of 'home_response_model.dart';
 _$HomeResponseModelImpl _$$HomeResponseModelImplFromJson(
         Map<String, dynamic> json) =>
     _$HomeResponseModelImpl(
+      count: json['count'] as int?,
       artObjects: (json['artObjects'] as List<dynamic>?)
           ?.map((e) => ArtObjectModel.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -17,6 +18,7 @@ _$HomeResponseModelImpl _$$HomeResponseModelImplFromJson(
 Map<String, dynamic> _$$HomeResponseModelImplToJson(
         _$HomeResponseModelImpl instance) =>
     <String, dynamic>{
+      'count': instance.count,
       'artObjects': instance.artObjects?.map((e) => e.toJson()).toList(),
     };
 
